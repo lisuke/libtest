@@ -35,4 +35,5 @@ add_executable(Test ${SOURCE_FILES})
 
 INSTALL (TARGETS __test_static __test_shared LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
 
-INSTALL (FILES hello.h DESTINATION include/hello)
+INSTALL (FILES test.h test-begin.h test-main-define.h test-test-define.h DESTINATION include/test)
+
