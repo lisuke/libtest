@@ -116,5 +116,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/__test_static.dir/DependInfo.cmake"
   "CMakeFiles/__test_shared.dir/DependInfo.cmake"
-  "CMakeFiles/Test.dir/DependInfo.cmake"
+  "CMakeFiles/libtest.dir/DependInfo.cmake"
   )

@@ -68,18 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -91,6 +79,18 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -183,17 +183,17 @@ __test_shared/fast:
 .PHONY : __test_shared/fast
 
 #=============================================================================
-# Target rules for targets named Test
+# Target rules for targets named libtest
 
 # Build rule for target.
-Test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Test
-.PHONY : Test
+libtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libtest
+.PHONY : libtest
 
 # fast build rule for target.
-Test/fast:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
-.PHONY : Test/fast
+libtest/fast:
+	$(MAKE) -f CMakeFiles/libtest.dir/build.make CMakeFiles/libtest.dir/build
+.PHONY : libtest/fast
 
 main.o: main.c.o
 
@@ -203,7 +203,7 @@ main.o: main.c.o
 main.c.o:
 	$(MAKE) -f CMakeFiles/__test_static.dir/build.make CMakeFiles/__test_static.dir/main.c.o
 	$(MAKE) -f CMakeFiles/__test_shared.dir/build.make CMakeFiles/__test_shared.dir/main.c.o
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.c.o
+	$(MAKE) -f CMakeFiles/libtest.dir/build.make CMakeFiles/libtest.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -214,7 +214,7 @@ main.i: main.c.i
 main.c.i:
 	$(MAKE) -f CMakeFiles/__test_static.dir/build.make CMakeFiles/__test_static.dir/main.c.i
 	$(MAKE) -f CMakeFiles/__test_shared.dir/build.make CMakeFiles/__test_shared.dir/main.c.i
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.c.i
+	$(MAKE) -f CMakeFiles/libtest.dir/build.make CMakeFiles/libtest.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -225,7 +225,7 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/__test_static.dir/build.make CMakeFiles/__test_static.dir/main.c.s
 	$(MAKE) -f CMakeFiles/__test_shared.dir/build.make CMakeFiles/__test_shared.dir/main.c.s
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.c.s
+	$(MAKE) -f CMakeFiles/libtest.dir/build.make CMakeFiles/libtest.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -235,11 +235,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... install"
 	@echo "... __test_static"
 	@echo "... __test_shared"
-	@echo "... install/local"
-	@echo "... Test"
+	@echo "... libtest"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"

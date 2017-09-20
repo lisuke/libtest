@@ -1,0 +1,9 @@
+/usr/lib/libtest.a
+/usr/lib/libtest.so.1.0
+/usr/lib/libtest.so.1
+/usr/lib/libtest.so
+/usr/include/test/test.h
+/usr/include/test/test-begin.h
+/usr/include/test/test-main-define.h
+/usr/include/test/test-test-define.h
+/usr/bin/libtest

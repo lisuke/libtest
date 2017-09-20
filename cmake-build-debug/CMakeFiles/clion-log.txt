@@ -1,6 +1,0 @@
-/opt/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lisuke/Desktop/code/libtest
--- This is the test_share OUTPUT_NAME: test
--- This is the test_static OUTPUT_NAME: test
--- Configuring done
--- Generating done
--- Build files have been written to: /home/lisuke/Desktop/code/libtest/cmake-build-debug
