@@ -1,0 +1,9 @@
+/home/lisuke/Desktop/code/libtest/build/CMakeFiles/install/strip.dir
+/home/lisuke/Desktop/code/libtest/build/CMakeFiles/install.dir
+/home/lisuke/Desktop/code/libtest/build/CMakeFiles/__test_static.dir
+/home/lisuke/Desktop/code/libtest/build/CMakeFiles/__test_shared.dir
+/home/lisuke/Desktop/code/libtest/build/CMakeFiles/install/local.dir
+/home/lisuke/Desktop/code/libtest/build/CMakeFiles/Test.dir
+/home/lisuke/Desktop/code/libtest/build/CMakeFiles/edit_cache.dir
+/home/lisuke/Desktop/code/libtest/build/CMakeFiles/rebuild_cache.dir
+/home/lisuke/Desktop/code/libtest/build/CMakeFiles/list_install_components.dir
